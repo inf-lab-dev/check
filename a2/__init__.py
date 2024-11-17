@@ -19,7 +19,7 @@ def multiple_items():
         .stdin('Burger')
         .stdin('Fries')
         .stdin('')
-        .stdout('\nThe order costs 10.68 €', regex=False)
+        .stdout('\nThe order costs 10.69 €', regex=False)
         .exit(0))
 
 
@@ -52,5 +52,5 @@ def case_insensitive():
         .stdin('PIZZA')
         .stdin('sALad')
         .stdin('')
-        .stdout('\nThe order costs 21.96 €', regex=False)
+        .stdout('\nThe order costs 21.98 €', regex=False)
         .exit(0))
