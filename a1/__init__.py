@@ -46,8 +46,8 @@ def multiple_items():
 def invalid_item():
     (check50.run('./snackbar')
      .stdin('iPhone 16 Pro')  # we're not in an Apple(TM) store :D
-     .stdin('')
      .stdout('The provided dish wasn\'t found', regex=False)
+     .stdin('')
      .stdout('\nThe order costs 0.00 €', regex=False)
      .exit(0))
 
