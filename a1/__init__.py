@@ -13,11 +13,22 @@ def compiles():
 
 
 @check50.check(compiles)
+def prints_header():
+    (check50.run('./snackbar')
+     .stdout('Welcome to our Snackbar!\n', regex=False)
+     .stdout('  Choose your dishes, press Enter when done.\n', regex=False)
+     .stdout('\n', regex=False)
+     .stdin('')
+     .exit(0))
+
+
+@check50.check(compiles)
 def single_dish():
     (check50.run('./snackbar')
      .stdin('Pizza')
      .stdin('')
-     .stdout('The order costs 7.49 €', regex=False)
+
+     .stdout('\nThe order costs 7.49 €', regex=False)
      .exit(0))
 
 
@@ -27,7 +38,7 @@ def multiple_items():
      .stdin('Burger')
      .stdin('Fries')
      .stdin('')
-     .stdout('The order costs 8.98 €', regex=False)
+     .stdout('\nThe order costs 8.98 €', regex=False)
      .exit(0))
 
 
@@ -36,8 +47,8 @@ def invalid_item():
     (check50.run('./snackbar')
      .stdin('iPhone 16 Pro')  # we're not in an Apple(TM) store :D
      .stdin('')
-     .stdout('The provided dish wasn\'t found', regex=False)
-     .stdout('The order costs 0.00 €', regex=False)
+     .stdout('\nThe provided dish wasn\'t found', regex=False)
+     .stdout('\nThe order costs 0.00 €', regex=False)
      .exit(0))
 
 
@@ -49,7 +60,7 @@ def mixed_items():
      .stdin('Soda')
      .stdin('')
      .stdout('The provided dish wasn\'t found', regex=False)
-     .stdout('The order costs 7.98 €', regex=False)
+     .stdout('\nThe order costs 7.98 €', regex=False)
      .exit(0))
 
 
@@ -57,7 +68,7 @@ def mixed_items():
 def empty_input():
     (check50.run('./snackbar')
      .stdin('')
-     .stdout('The order costs 0.00 €', regex=False)
+     .stdout('\nThe order costs 0.00 €', regex=False)
      .exit(0))
 
 
@@ -68,5 +79,5 @@ def case_insensitive():
      .stdin('PIZZA')
      .stdin('sALad')
      .stdin('')
-     .stdout('The order costs 18.47 €', regex=False)
+     .stdout('\nThe order costs 18.47 €', regex=False)
      .exit(0))
