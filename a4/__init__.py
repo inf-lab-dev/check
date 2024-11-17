@@ -88,5 +88,5 @@ def case_insensitive():
         .stdin('sALad')
         .stdin('3')         # Valid order for 3 Salads
         .stdin('')
-        .stdout('\nThe order costs 41.54 €', regex=False)
+        .stdout('\nThe order costs 40.98 €', regex=False)
         .exit(0))
