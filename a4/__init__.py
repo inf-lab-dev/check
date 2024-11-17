@@ -10,7 +10,7 @@ def single_item():
         .stdin('Pizza')
         .stdin('3')  # Requesting 3 Pizzas
         .stdin('')
-        .stdout('\nThe order costs 26.75 €', regex=False)
+        .stdout('\nThe order costs 26.74 €', regex=False)
         .exit(0))
 
 
@@ -22,7 +22,7 @@ def multiple_items():
         .stdin('Soda')
         .stdin('5')  # Requesting 5 Sodas
         .stdin('')
-        .stdout('\nThe order costs 20.68 €', regex=False)
+        .stdout('\nThe order costs 26.10 €', regex=False)
         .exit(0))
 
 
@@ -62,7 +62,7 @@ def mixed_items_with_stock():
         .stdin('Salad')
         .stdin('3')         # Valid order
         .stdin('')
-        .stdout('\nThe order costs 55.24 €', regex=False)
+        .stdout('\nThe order costs 69.96 €', regex=False) # fancy number, isn't it?
         .exit(0))
 
 
@@ -74,7 +74,7 @@ def invalid_amount():
         .stdin('-3')    # Invalid quantity
         .stdin('2')     # Valid quantity
         .stdin('')
-        .stdout('\nThe order costs 17.81 €', regex=False)
+        .stdout('\nThe order costs 17.83 €', regex=False)
         .exit(0))
 
 
