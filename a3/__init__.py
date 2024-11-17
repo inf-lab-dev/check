@@ -1,8 +1,9 @@
+from a2 import exists, compiles, prints_header, empty_input, single_item, multiple_items, invalid_item, case_insensitive
 import check50
 import check50.c
 
 a2 = check50.import_checks('../a2')
-from a2 import exists, compiles, prints_header, empty_input, single_item, multiple_items, invalid_item, case_insensitive
+
 
 @check50.check(compiles)
 def out_of_stock():
@@ -29,5 +30,6 @@ def mixed_items_with_stock():
         .stdin('Salad')   # Valid
         .stdin('Salad')   # Out of stock
         .stdout('Not enough dishes available.', regex=False)
+        .stdin('')
         .stdout('\nThe order costs 24.88 €', regex=False)
         .exit(0))
