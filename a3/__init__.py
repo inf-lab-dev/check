@@ -30,5 +30,5 @@ def mixed_items_with_stock():
         .stdin('Salad')   # Out of stock
         .stdout('Not enough dishes available.', regex=False)
         .stdin('')
-        .stdout('\nThe order costs 24.88 €', regex=False)
+        .stdout('\nThe order costs 27.31 €', regex=False)
         .exit(0))
