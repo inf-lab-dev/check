@@ -47,7 +47,7 @@ def invalid_item():
     (check50.run('./snackbar')
      .stdin('iPhone 16 Pro')  # we're not in an Apple(TM) store :D
      .stdin('')
-     .stdout('\nThe provided dish wasn\'t found', regex=False)
+     .stdout('The provided dish wasn\'t found', regex=False)
      .stdout('\nThe order costs 0.00 €', regex=False)
      .exit(0))
 
@@ -57,9 +57,9 @@ def mixed_items():
     (check50.run('./snackbar')
      .stdin('Burger')
      .stdin('iPhone 16 Pro')
+     .stdout('The provided dish wasn\'t found', regex=False)
      .stdin('Soda')
      .stdin('')
-     .stdout('The provided dish wasn\'t found', regex=False)
      .stdout('\nThe order costs 7.98 €', regex=False)
      .exit(0))
 
