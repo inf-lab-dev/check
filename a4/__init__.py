@@ -1,9 +1,8 @@
-from a3 import exists, compiles, prints_header, empty_input
 import check50
 import check50.c
 
 a3 = check50.import_checks('../a3')
-
+from a3 import exists, compiles, prints_header, empty_input
 
 @check50.check(compiles)
 def single_item():

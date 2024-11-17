@@ -1,9 +1,8 @@
-from a2 import exists, compiles, prints_header, empty_input, single_item, multiple_items, invalid_item, case_insensitive
 import check50
 import check50.c
 
 a2 = check50.import_checks('../a2')
-
+from a2 import exists, compiles, prints_header, empty_input, single_item, multiple_items, invalid_item, case_insensitive
 
 @check50.check(compiles)
 def out_of_stock():
