@@ -23,7 +23,15 @@ def prints_header():
 
 
 @check50.check(compiles)
-def single_dish():
+def empty_input():
+    (check50.run('./snackbar')
+     .stdin('')
+     .stdout('\nThe order costs 0.00 €', regex=False)
+     .exit(0))
+
+
+@check50.check(compiles)
+def single_item():
     (check50.run('./snackbar')
      .stdin('Pizza')
      .stdin('')
@@ -61,14 +69,6 @@ def mixed_items():
      .stdin('Soda')
      .stdin('')
      .stdout('\nThe order costs 7.98 €', regex=False)
-     .exit(0))
-
-
-@check50.check(compiles)
-def empty_input():
-    (check50.run('./snackbar')
-     .stdin('')
-     .stdout('\nThe order costs 0.00 €', regex=False)
      .exit(0))
 
 
