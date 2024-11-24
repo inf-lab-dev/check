@@ -1,7 +1,7 @@
 import check50
 import check50.c
 
-OUTPUT_HASH = ""
+OUTPUT_HASH = 'a123f437a3f784a1f39f6cb7a384fb45347a1466d21d93bc02b5ba57c00a7a7c'
 
 
 @check50.check()
