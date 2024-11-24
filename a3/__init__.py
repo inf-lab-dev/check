@@ -6,7 +6,7 @@ OUTPUT_HASH = ""
 
 @check50.check()
 def exists():
-    check50.exists('watermark.c')
+    check50.exists('watermark.c', 'overlay.bmp')
     check50.include('../a2/bmp.h')
 
 
@@ -19,7 +19,7 @@ def compiles():
 def overlays_image():
     check50.include('../a2/uni.bmp')
 
-    check50.run('./watermark uni.bmp output.bmp').exit(0)
+    check50.c.valgrind('./watermark uni.bmp output.bmp').exit(0)
 
     if check50.hash('output.bmp') != OUTPUT_HASH:
         raise check50.Failure(
