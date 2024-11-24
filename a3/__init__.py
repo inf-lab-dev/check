@@ -3,8 +3,11 @@ import check50.c
 
 OUTPUT_HASH = ""
 
-a2 = check50.import_checks('../a2')
-from a2 import exists
+
+@check50.check()
+def exists():
+    check50.exists('watermark.c')
+    check50.include('../a2/bmp.h')
 
 
 @check50.check(exists)
@@ -14,7 +17,7 @@ def compiles():
 
 @check50.check(compiles)
 def overlays_image():
-    check50.include('../uni.bmp')
+    check50.include('../a2/uni.bmp')
 
     check50.c.valgrind('./watermark uni.bmp output.bmp').exit(0)
 
