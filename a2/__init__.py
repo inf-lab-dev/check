@@ -46,7 +46,7 @@ def functions_correctly_implemented():
 
     check50.c.compile('watermark.c')
     (check50.c.valgrind('./watermark')
-     .stdout('Image loaded: 3x3', regex=False)
+     .stdout('Image loaded: 4032x2268', regex=False)
      .exit(0))
 
     if check50.hash('output.bmp') != check50.hash('uni.bmp'):
