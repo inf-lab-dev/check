@@ -19,8 +19,7 @@ def compiles():
 def overlays_image():
     check50.include('image.bmp')
 
-    check50.run('./watermark image.bmp output.bmp').stdout('X')
-    # check50.c.valgrind('./watermark uni.bmp output.bmp').exit(0)
+    check50.c.valgrind('./watermark image.bmp output.bmp').exit(0)
 
     if check50.hash('output.bmp') != OUTPUT_HASH:
         raise check50.Failure(
