@@ -20,10 +20,10 @@ def has_no_main_function():
 
 @check50.check(has_no_main_function)
 def functions_correctly_implemented():
-    check50.include('main.c')
+    check50.include('main.c', 'Makefile')
 
-    check50.c.compile('watermark.c', 'main.c')
-    (check50.c.valgrind('./main')
+    check50.c.run('make watermark').exit(0)
+    (check50.c.valgrind('./watermark')
      .stdout('Image loaded: 3x3', regex=False)
      .exit(0))
 
