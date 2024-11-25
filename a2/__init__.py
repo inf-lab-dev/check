@@ -2,7 +2,7 @@ import check50
 import check50.c
 
 a1 = check50.import_checks('../a1')
-from a1 import exists, compiles, prints_cities
+from a1 import exists, compiles, exits_with_zero, prints_cities
 
 CITIES = {
     'Phoenix': 107,
@@ -18,7 +18,7 @@ CITIES = {
 }
 
 
-@check50.check(compiles)
+@check50.check(prints_cities)
 def prints_sorted_cities():
     run = check50.run('./temperature')
     stdout = run.stdout()
