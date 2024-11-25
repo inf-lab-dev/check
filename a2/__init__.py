@@ -35,6 +35,6 @@ def prints_sorted_cities():
             except ValueError:
                 continue
 
-    if printed_cities.values() != sorted(CITIES.values(), reverse=True):
+    if list(printed_cities.values()) != sorted(CITIES.values(), reverse=True):
         raise check50.Failure('Temperatures are not sorted in descending order',
-                              help='Ensure you sort the cities by temperature in descending order.' + str(printed_cities.values()) + str(sorted(CITIES.values(), reverse=True)))
+                              help='Ensure you sort the cities by temperature in descending order.' + str(list(printed_cities.values())) + str(sorted(CITIES.values(), reverse=True)))
