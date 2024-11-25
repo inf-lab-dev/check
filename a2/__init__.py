@@ -1,8 +1,8 @@
-from a1 import CITIES, exists, compiles, exits_with_zero, prints_cities
 import check50
 import check50.c
 
 a1 = check50.import_checks('../a1')
+from a1 import CITIES, exists, compiles, exits_with_zero, prints_cities
 
 
 @check50.check(prints_cities)
