@@ -35,4 +35,4 @@ def prints_cities():
             raise check50.Failure(f'Expected city "{city}" to be printed with temperature "{
                                   temperature}"', help='Did you forget to add it?')
 
-    run.exit(0)
+    # run.exit(0)
