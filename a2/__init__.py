@@ -1,8 +1,9 @@
+from a1 import CITIES, exists, compiles, exits_with_zero, prints_cities
 import check50
 import check50.c
 
 a1 = check50.import_checks('../a1')
-from a1 import CITIES, exists, compiles, exits_with_zero, prints_cities
+
 
 @check50.check(prints_cities)
 def prints_sorted_cities():
@@ -22,4 +23,12 @@ def prints_sorted_cities():
                 continue
 
     if list(printed_cities.values()) != sorted(CITIES.values(), reverse=True):
-        raise check50.Failure('Temperatures are not sorted in descending order')
+        raise check50.Failure(
+            'Temperatures are not sorted in descending order')
+
+
+@check50.check(prints_sorted_cities)
+def prints_hottest_city():
+    (check50.run('./temperature')
+     .stdout('The highest temperature in July is in Austin.')
+     .exit(0))
