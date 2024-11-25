@@ -2,16 +2,16 @@ import check50
 import check50.c
 
 CITIES = {
-    'Phoenix': 107,
-    'Las Vegas': 105,
-    'Austin': 97,
-    'Miami': 97,
-    'Denver': 90,
-    'Chicago': 85,
-    'New York': 85,
-    'Los Angeles': 82,
-    'Boston': 82,
-    'San Francisco': 66
+    'Austin': 36,
+    'Boston': 28,
+    'Chicago': 29,
+    'Denver': 32,
+    'Las Vegas': 41,
+    'Los Angeles': 28,
+    'Miami': 36,
+    'New York': 29,
+    'Phoenix': 42,
+    'San Francisco': 19
 }
 
 
