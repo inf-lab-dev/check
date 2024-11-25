@@ -2,21 +2,7 @@ import check50
 import check50.c
 
 a1 = check50.import_checks('../a1')
-from a1 import exists, compiles, exits_with_zero, prints_cities
-
-CITIES = {
-    'Phoenix': 107,
-    'Las Vegas': 105,
-    'Austin': 97,
-    'Miami': 97,
-    'Denver': 90,
-    'Chicago': 85,
-    'New York': 85,
-    'Boston': 82,
-    'Los Angeles': 82,
-    'San Francisco': 66
-}
-
+from a1 import CITIES, exists, compiles, exits_with_zero, prints_cities
 
 @check50.check(prints_cities)
 def prints_sorted_cities():
@@ -36,5 +22,4 @@ def prints_sorted_cities():
                 continue
 
     if list(printed_cities.values()) != sorted(CITIES.values(), reverse=True):
-        raise check50.Failure('Temperatures are not sorted in descending order',
-                              help='Ensure you sort the cities by temperature in descending order.' + str(list(printed_cities.values())) + str(sorted(CITIES.values(), reverse=True)))
+        raise check50.Failure('Temperatures are not sorted in descending order')
