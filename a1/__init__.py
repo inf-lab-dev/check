@@ -26,14 +26,14 @@ def compiles():
 
 
 @check50.check(compiles)
+def exits_with_zero():
+    check50.run('./temperature').exit(0)
+
+
+@check50.check(exits_with_zero)
 def prints_cities():
     run = check50.run('./temperature')
-
     stdout = run.stdout()
-    exit = run.exit()
-
-    if exit != 0:
-        raise check50.Failure(f'Expected exit code "0", but got "{exit}"')
 
     for city, temperature in CITIES.items():
         if not f'{city}: {temperature}\n' in stdout:
