@@ -30,5 +30,5 @@ def prints_sorted_cities():
 @check50.check(prints_sorted_cities)
 def prints_hottest_city():
     (check50.run('./temperature')
-     .stdout('The highest temperature in July is in Austin.')
+     .stdout('The highest temperature in July is in Phoenix.')
      .exit(0))
