@@ -30,9 +30,9 @@ def prints_cities():
     run = check50.run('./temperature')
     stdout = run.stdout()
 
+    run.exit(0)
+
     for city, temperature in CITIES.items():
         if not f'{city}: {temperature}\n' in stdout:
             raise check50.Failure(f'Expected city "{city}" to be printed with temperature "{
                                   temperature}"', help='Did you forget to add it?')
-
-    # run.exit(0)
