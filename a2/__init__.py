@@ -12,8 +12,8 @@ CITIES = {
     'Denver': 90,
     'Chicago': 85,
     'New York': 85,
-    'Los Angeles': 82,
     'Boston': 82,
+    'Los Angeles': 82,
     'San Francisco': 66
 }
 
@@ -34,7 +34,8 @@ def prints_sorted_cities():
                 printed_cities[city] = int(temperature)
             except ValueError:
                 continue
-
+    print(printed_cities.values())
+    print(sorted(CITIES.values(), reverse=True))
     if printed_cities.values() != sorted(CITIES.values(), reverse=True):
         raise check50.Failure('Temperatures are not sorted in descending order',
                               help='Ensure you sort the cities by temperature in descending order.')
