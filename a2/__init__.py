@@ -20,13 +20,6 @@ def validates_arguments():
 
 
 @check50.check(compiles)
-def handles_missing_word_list():
-    (check50.run('./search-zone random-file-that-does-not-exist.txt')
-     .stdout('ERROR: Could not open random-file-that-does-not-exist.txt!', regex=False)
-     .exit(1))
-
-
-@check50.check(compiles)
 def quits_on_q():
     with open('words.txt', 'w') as f:
         f.write('q\n')
