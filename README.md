@@ -11,3 +11,4 @@ The various checks are spread over multiple branches as [check50](https://github
 -   [snackbar](https://github.com/inf-lab-dev/check/tree/snackbar)
 -   [temperature](https://github.com/inf-lab-dev/check/tree/temperature)
 -   [watermark](https://github.com/inf-lab-dev/check/tree/watermark)
+-   [errors](https://github.com/inf-lab-dev/check/tree/errors)
