@@ -4,6 +4,7 @@ import check50.c
 a2 = check50.import_checks('../a2')
 from a2 import *
 
+
 @check50.check(exists)
 def create():
     """The create function works correctly"""
