@@ -1,3 +1,8 @@
+#
+# THIS FILE HOLDS THE SAME CONTENT AS "a2/test_file.py"
+#  (but needs to be duplicated for check50 to work properly)
+#
+
 from todo import ToDo, todos, show
 import io
 

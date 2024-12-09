@@ -13,7 +13,7 @@ def create():
         .stdin('Learn Inf-Einf')
         .stdout('ToDo created successfully!')
         .stdin('1')
-        .stdout('[0] Learn Inf-Einf')
+        .stdout('[0] Learn Inf-Einf', regex=False)
         .stdin('0')
         .exit(0))
 
@@ -28,7 +28,7 @@ def complete():
         .stdin('0')
         .stdout('Successfully completed the ToDo!')
         .stdin('1')
-        .stdout('[0] Learn Inf-Einf (completed)')
+        .stdout('[0] Learn Inf-Einf (completed)', regex=False)
         .stdin('0')
         .exit(0))
 
@@ -77,7 +77,7 @@ def delete_invalid():
         .stdin('-4')
         .stdout('ERROR: .*')
         .stdin('1')
-        .stdout('[0] Learn Inf-Einf')
+        .stdout('[0] Learn Inf-Einf', regex=False)
         .stdin('0')
         .exit(0))
 
@@ -93,7 +93,7 @@ def update():
         .stdin('Learn IntroSP')
         .stdout('Successfully updated the ToDo!')
         .stdin('1')
-        .stdout('[0] Learn IntroSP')
+        .stdout('[0] Learn IntroSP', regex=False)
         .stdin('0')
         .exit(0))
 
