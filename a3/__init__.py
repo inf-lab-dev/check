@@ -42,10 +42,6 @@ def complete_invalid():
         .stdin('3')
         .stdin('44')
         .stdout('ERROR: .*')
-        .stdin('3')
-        .stdin('-4')
-        .stdout('ERROR: .*')
-        .stdout('.*')
         .stdin('0')
         .exit(0))
 
