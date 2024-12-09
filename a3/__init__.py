@@ -45,6 +45,7 @@ def complete_invalid():
         .stdin('3')
         .stdin('-4')
         .stdout('ERROR: .*')
+        .stdout('.*')
         .stdin('0')
         .exit(0))
 
@@ -103,6 +104,7 @@ def update_invalid():
         .stdin('Learn Inf-Einf')
         .stdin('5')
         .stdin('44')
+        .stdin('Learn IntroSP')
         .stdout('ERROR: .*')
         .stdin('0')
         .exit(0))
