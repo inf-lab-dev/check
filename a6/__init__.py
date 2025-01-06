@@ -25,5 +25,5 @@ def exists():
 
 @check50.check(exists)
 def main_valid():
-    """main calls the implemented functions"""
+    """main processes the values correctly"""
     check50.run('pytest test_a6.py -k "test_main"').exit(0)

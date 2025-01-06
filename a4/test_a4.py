@@ -1,5 +1,4 @@
 from unittest.mock import patch
-from city_weather import CityWeather
 from main import main
 
 
@@ -7,8 +6,6 @@ from main import main
 @patch('main.extract_data')
 def test_main(mock_extract_data, mock_fetch_weather):
     mock_fetch_weather.return_value = 'Bamberg: ⛅️  🌡️+5°C 🌬️↑10km/h'
-    mock_extract_data.side_effect = lambda weather: CityWeather(
-        'Bamberg', '⛅️', 5, 10)
 
     with patch('main.CITIES_LIST', ['Bamberg']):
         main()
