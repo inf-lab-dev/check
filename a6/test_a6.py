@@ -10,7 +10,8 @@ def test_main(mock_fetch_weather, capfd):
         'New York: ⛅️  🌡️+30°C 🌬️↗9km/h',
     ]
 
-    main()
+    with patch('main.CITIES_LIST', ['Bamberg', 'Paris', 'New York']):
+        main()
 
     captured = capfd.readouterr()
 
