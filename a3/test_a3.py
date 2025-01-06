@@ -1,7 +1,7 @@
 from city_weather import CityWeather
 from main import extract_data
 
-ARROWS = ['↑', '↗', '→', '↘', '↙', '↓']
+ARROWS = ['↑', '↗', '→', '↘', '↓', '↙', '←', '↖']
 
 
 def test_extract_data_valid():
