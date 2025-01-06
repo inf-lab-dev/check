@@ -1,3 +1,3 @@
-# check/todo
+# check/weather
 
-[check50](https://github.com/cs50/check50) checks for the [todo lab](https://inf-lab.dev/todo).
+[check50](https://github.com/cs50/check50) checks for the [weather lab](https://inf-lab.dev/weather).
