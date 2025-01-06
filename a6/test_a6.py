@@ -2,9 +2,9 @@ from unittest.mock import patch
 from main import main, CityWeather
 
 
-@patch('weather.fetch_weather')
-@patch('weather.extract_data')
-@patch('weather.TempRangeFilter')
+@patch('main.fetch_weather')
+@patch('main.extract_data')
+@patch('main.TempRangeFilter')
 def test_main(mock_temp_range_filter, mock_extract_data, mock_fetch_weather, capfd):
     mock_fetch_weather.side_effect = [
         'Bamberg: ⛅️  🌡️+25°C 🌬️↑10km/h',
