@@ -7,15 +7,15 @@ from main import main, CityWeather
 @patch('weather.TempRangeFilter')
 def test_main(mock_temp_range_filter, mock_extract_data, mock_fetch_weather, capfd):
     mock_fetch_weather.side_effect = [
-        'Bamberg: 🌤️ 🌡️25°C ↑ 10km/h',
-        'Paris: 🌤️ 🌡️18°C ↑ 15km/h',
-        'New York: 🌤️ 🌡️30°C ↑ 20km/h',
+        'Bamberg: ⛅️  🌡️+25°C 🌬️↑10km/h',
+        'Paris: 🌨  🌡️+18°C 🌬️→29km/h',
+        'New York: ⛅️  🌡️+30°C 🌬️↗9km/h',
     ]
 
     mock_extract_data.side_effect = lambda weather: {
-        'Bamberg: 🌤️ 🌡️25°C ↑ 10km/h': CityWeather('Bamberg', '🌤️', 25, 10),
-        'Paris: 🌤️ 🌡️18°C ↑ 15km/h': CityWeather('Paris', '🌤️', 18, 15),
-        'New York: 🌤️ 🌡️30°C ↑ 20km/h': CityWeather('New York', '🌤️', 30, 20),
+        'Bamberg: ⛅️  🌡️+25°C 🌬️↑10km/h': CityWeather('Bamberg', '🌤️', 25, 10),
+        'Paris: 🌨  🌡️+18°C 🌬️→29km/h': CityWeather('Paris', '🌤️', 18, 29),
+        'New York: ⛅️  🌡️+30°C 🌬️↗9km/h': CityWeather('New York', '🌤️', 30, 9),
     }[weather]
 
     filter_instance = mock_temp_range_filter.return_value

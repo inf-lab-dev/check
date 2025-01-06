@@ -15,11 +15,5 @@ def exists():
 
 @check50.check(exists)
 def extract_data_valid():
-    """extract_data returns correct result"""
+    """extract_data returns correct result for different wind directions"""
     check50.run('pytest test_a3.py -k "test_extract_data_valid"').exit(0)
-
-
-@check50.check(exists)
-def extract_data_with_arrows():
-    """extract_data returns correct result if the string contains multiple arrows"""
-    check50.run('pytest test_a2.py -k "test_extract_data_with_arrows"').exit(0)

@@ -2,7 +2,7 @@ import check50
 
 a2 = check50.import_checks('../a2')
 a3 = check50.import_checks('../a3')
-from a3 import extract_data_valid, extract_data_with_arrows
+from a3 import extract_data_valid
 from a2 import fetch_weather_valid, fetch_weather_http_error, fetch_weather_exception
 
 @check50.check()

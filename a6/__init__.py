@@ -6,7 +6,7 @@ a4 = check50.import_checks('../a4')
 a5 = check50.import_checks('../a5')
 from a5 import temp_range_filter_init, temp_range_filter_within_range, temp_range_filter_below_range, temp_range_filter_above_range
 from a4 import main_valid
-from a3 import extract_data_valid, extract_data_with_arrows
+from a3 import extract_data_valid
 from a2 import fetch_weather_valid, fetch_weather_http_error, fetch_weather_exception
 
 @check50.check()
