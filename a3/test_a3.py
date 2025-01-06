@@ -12,6 +12,6 @@ def test_extract_data_valid():
 
         assert isinstance(result, CityWeather)
         assert result.city_name == 'Bamberg'
-        assert result.condition == '🌤️'
+        assert result.condition == '⛅️'
         assert result.temperature == 5
         assert result.wind == 10

@@ -8,7 +8,7 @@ from main import main
 def test_main(mock_extract_data, mock_fetch_weather):
     mock_fetch_weather.return_value = 'Bamberg: ⛅️  🌡️+5°C 🌬️↑10km/h'
     mock_extract_data.side_effect = lambda weather: CityWeather(
-        'Bamberg', '🌤️', 5, 10)
+        'Bamberg', '⛅️', 5, 10)
 
     with patch('weather.CITIES_LIST', ['Bamberg']):
         main()
